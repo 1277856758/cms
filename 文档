@@ -1,0 +1,33 @@
+
+ajax:get
+
+this.axios.get(this.api.loginApi.login)
+                .then((response) => {
+                        this.customerData = null;
+                        this.$message.error(response.data.message);
+ })
+post
+ var params={
+ }
+  this.axios.post(this.api.contactApi.get, params)
+  .then((reponse) => {
+
+  })
+自定义请求
+  this.axios({
+                    method: 'get',
+                    url: "http://10.10.12.248:8999/buttonAlias/text?string=123",
+                }).then(function (res) {
+
+                }).catch(function (res) {
+
+                })
+
+  创建验证
+   var checkNull = (rule, value, callback) => {
+                  if (value === '') {
+                      callback(new Error(rule.msg));
+                  } else {
+                      callback();
+                  }
+              };
